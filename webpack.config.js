@@ -28,17 +28,8 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'style-loader',
-          options: {
-            // insertInto: '#app',
-            singleton: true,
-            // transform: './css.transform.js'
-          }
-        }, {
+        MiniCssExtractPlugin.loader,{
           loader: 'css-loader',
-          // loader:'file-loader'
           options: {
             minimize: true,
             modules: true,
